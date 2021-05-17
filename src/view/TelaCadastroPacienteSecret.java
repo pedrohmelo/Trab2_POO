@@ -183,6 +183,27 @@ public class TelaCadastroPacienteSecret extends javax.swing.JInternalFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         String nome = jTextField1.getText();
         System.out.println(""+nome);
+        
+        String endereco = jTextField3.getText();
+        System.out.println(""+endereco);
+        
+        String telefone = jFormattedTextField3.getText();
+        System.out.println(""+telefone);
+        
+        String email = jTextField2.getText();
+        System.out.println(""+email);
+        
+        String RG = jFormattedTextField1.getText();
+        System.out.println(""+RG);
+        
+        String dataNasc = jFormattedTextField2.getText();
+        System.out.println(""+dataNasc);
+        
+        //String tipoConv = jComboBox1.getText();
+        //System.out.println(""+tipoConv);
+        
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

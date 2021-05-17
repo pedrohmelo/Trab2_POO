@@ -1,59 +1,66 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package POJO;
 
-import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 
-/**
- *
- * @author Pichau
- */
 @Entity
-public class Consulta implements Serializable {
 
-    private static final long serialVersionUID = 1L;
+public class Consulta{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
-        return hash;
-    }
-
-    @Override
-    public boolean equals(Object object) {
-        // TODO: Warning - this method won't work in the case the id fields are not set
-        if (!(object instanceof Consulta)) {
-            return false;
-        }
-        Consulta other = (Consulta) object;
-        if ((this.id == null && other.id != null) || (this.id != null && !this.id.equals(other.id))) {
-            return false;
-        }
-        return true;
-    }
-
-    @Override
-    public String toString() {
-        return "POJO.Consulta[ id=" + id + " ]";
-    }
+    private int IdConsulta;
     
+    private String horario;
+    private String medico;
+    private String tipoConvenio;
+    @OneToOne
+    private Paciente paciente;
+    
+    public Consulta(){
+        
+    }
+
+    public String getHorario() {
+        return horario;
+    }
+
+    public void setHorario(String horario) {
+        this.horario = horario;
+    }
+
+    public String getMedico() {
+        return medico;
+    }
+
+    public void setMedico(String medico) {
+        this.medico = medico;
+    }
+
+    public Paciente getPaciente() {
+        return paciente;
+    }
+
+    public void setPaciente(Paciente paciente) {
+        this.paciente = paciente;
+    }
+
+    public String getTipo() {
+        return tipoConvenio;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipoConvenio = tipoConvenio;
+    }
+
+    public int getIdConsulta() {
+        return IdConsulta;
+    }
+
+    public void setIdConsulta(int idConsulta) {
+        this.IdConsulta = IdConsulta;
+    }
 }
