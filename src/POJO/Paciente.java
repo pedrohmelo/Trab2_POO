@@ -11,7 +11,7 @@ import javax.persistence.OneToOne;
 public class Paciente {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int IDPaciente;
+    private int IdPaciente;
     private String nome;
     private String RG;
     private String endereco;
@@ -26,12 +26,12 @@ public class Paciente {
     private Consulta consulta;
     
     
-    public int getIDPaciente() {
-        return IDPaciente;
+    public int getIdPaciente() {
+        return IdPaciente;
     }
 
-    public void setIDPaciente(int IDPaciente) {
-        this.IDPaciente = IDPaciente;
+    public void setIdPaciente(int IdPaciente) {
+        this.IdPaciente = IdPaciente;
     }
 
     public String getNome() {

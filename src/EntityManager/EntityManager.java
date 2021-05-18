@@ -56,8 +56,8 @@ public class EntityManager<Entity>{
             return em.createQuery("SELECT a FROM Paciente a", Paciente.class).getResultList();
         }
         
-        public Paciente buscaPaciente(int idPaciente) {
-            return em.find(Paciente.class, idPaciente);
+        public Paciente buscaPaciente(int IdPaciente) {
+            return em.find(Paciente.class, IdPaciente);
         }
         public List<Paciente> buscaPacienteConsultas() {
             return em.createQuery("SELECT a FROM Paciente a WHERE a.consulta IS NOT NULL", Paciente.class).getResultList();

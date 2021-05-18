@@ -69,6 +69,11 @@ public class TelaPrincipalMDI extends javax.swing.JFrame {
 
         copyMenuItem.setMnemonic('y');
         copyMenuItem.setText("Atualizar");
+        copyMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                copyMenuItemActionPerformed(evt);
+            }
+        });
         editMenu.add(copyMenuItem);
 
         pasteMenuItem.setMnemonic('p');
@@ -148,6 +153,12 @@ public class TelaPrincipalMDI extends javax.swing.JFrame {
         desktopPane.add(cadCons);
         cadCons.setVisible(true);
     }//GEN-LAST:event_contentMenuItemActionPerformed
+
+    private void copyMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_copyMenuItemActionPerformed
+        TelaAtualizarPacienteSecret atualizaPaciente = new TelaAtualizarPacienteSecret();
+        desktopPane.add(atualizaPaciente);
+        atualizaPaciente.setVisible(true);
+    }//GEN-LAST:event_copyMenuItemActionPerformed
 
     /**
      * @param args the command line arguments
